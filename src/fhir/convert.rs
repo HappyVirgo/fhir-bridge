@@ -235,7 +235,7 @@ impl Converter<'_> {
             participant,
             period: (start.is_some() || end.is_some()).then_some(Period { start, end }),
             location: (!location_name.is_empty())
-                .then(|| EncounterLocation {
+                .then_some(EncounterLocation {
                     location: Reference { reference: None, display: Some(location_name) },
                 })
                 .into_iter()
