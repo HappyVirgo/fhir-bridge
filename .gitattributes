@@ -1,0 +1,2 @@
+# HL7 fixtures use deliberate CR / LF / CRLF segment terminators; never normalise them.
+*.hl7 -text
